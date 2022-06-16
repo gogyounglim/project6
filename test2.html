@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <style>
+        * {box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth;}
+        body {font-family: Verdana, sans-serif; height: 4000px; background-color: white; transition: 1s;}
+        .mySlides {display: none; height: 800px; margin-top: 80px;}
+        .mySlides img{height: 100%;}
+        img {vertical-align: middle; }
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 100%;
+          
+          position: relative;
+          margin: auto;
+        }
+        /* Caption text */
+        .text1 {
+          color: #f2f2f2;
+          font-size: 50px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 400px;
+          width: 50%;
+          text-align: center;
+          color: rgb(59, 59, 59);
+        }
+        .text1 h1{ 
+            font-size: 70px;
+        }
+        .text2 {
+          color: #f2f2f2;
+          font-size: 50px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 200px;
+          width: 50%;
+          text-align: center;
+          color: black;
+        }
+        .text3 {
+          color: #f2f2f2;
+          font-size: 50px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 500px;
+          width: 50%;
+          text-align: center;
+          color: black;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin-top: 20px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+          from {opacity: .4;} 
+          to {opacity: 1}
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+
+        #container1{
+            width: 100%; 
+            height: 700px;
+            background-color: yellow;
+            margin-top: 100px;
+            opacity: 0;
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+        }
+        .container1flex{
+            width: 33.33%; 
+            height: 100%;
+        }
+        .container1flex:nth-child(1){
+            border-right: 1px solid white;
+            height: 0%;
+        }
+        .container1flex:nth-child(3){
+            border-left: 1px solid white;
+            height: 0%;
+        }
+
+        </style>
+</head>
+<body>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="img/ps-plus-overview-hero-banner-desktop-01-en-19apr22.webp" style="width:100%" >
+            <div class="text1">
+                <h1>완전히 새로워진 PlayStation5 소개</h1>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="img/the-last-of-us-part-i-hero-banner-desktop-01-en-18may22 (1).jfif" style="width:100%">
+            <div class="text2">
+                <img src="img/img-removebg-preview.png" alt="">
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="img/horizon-forbidden-west-hero-banner-desktop-01-en-07may21.webp" style="width:100%">
+            <div class="text3">Caption Three</div>
+        </div>
+
+        </div>
+        <br>
+
+        <div  style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+    </div>
+
+    <div id="container1">
+        
+        <div class="container1flex"></div>
+        <div class="container1flex"></div>
+        <div class="container1flex"></div>
+    </div>
+
+<script>
+    
+    // 메인슬라이드
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // 5초에한번 변경
+    }
+
+
+    // 스크롤효과
+    $(function(){
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            if($(this).scrollTop()>='200'){
+                $('#container1').animate({'opacity':'1'},1000);
+            }  
+            
+            if($(this).scrollTop()=='300'){
+                $('body').css({'background-color':'black'},1000);
+                $('.container1flex:nth-child(1)').animate({'height':'30%'},500);
+                $('.container1flex:nth-child(3)').animate({'height':'10%'},500);
+            }
+            else if($(this).scrollTop()=='400'){
+                $('.container1flex:nth-child(1)').animate({'height':'50%'},500);
+                $('.container1flex:nth-child(3)').animate({'height':'30%'},500);
+            }
+            else if($(this).scrollTop()=='500'){
+                $('.container1flex:nth-child(1)').animate({'height':'70%'},500);
+                $('.container1flex:nth-child(3)').animate({'height':'50%'},500);
+            }
+            else if($(this).scrollTop()=='600'){
+                $('.container1flex:nth-child(1)').animate({'height':'90%'},500);
+                $('.container1flex:nth-child(3)').animate({'height':'70%'},500);
+            }
+            else if($(this).scrollTop()>='700'){
+                $('.container1flex:nth-child(1)').animate({'height':'100%'},500);
+                $('.container1flex:nth-child(3)').animate({'height':'100%'},500);
+            }                
+        });
+
+
+    });
+</script>
+</body>
+</html>
