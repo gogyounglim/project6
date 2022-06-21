@@ -20,9 +20,11 @@
 
         <div class="mySlides fade">
             
-            <img src="img/ps-plus-overview-hero-banner-desktop-01-en-19apr22.webp" style="width:100%" >
+            <img src="img/1-1.png" style="width:100%" >
             <div class="text1">
+                <img src="img/1-2.png" alt="">
                 <h1>완전히 새로워진 PlayStation5 소개</h1>
+                <button class="container3Bt">자세히보기</button>
             </div>
         </div>
 
@@ -73,7 +75,7 @@
         <div class="container2flex"></div>
         <div class="container2flex">
             <div class="container2fleximg">
-                <img src="img/bff196cd80b7c.jpg" alt="">
+                <img class="img2" src="img/bff196cd80b7c.jpg" alt="">
             </div>
         </div>
         <div class="container2flex">
@@ -119,6 +121,21 @@
         </div>
     </div>
 
+    <div id="container6">
+        <div class="container6flex"></div>
+        <div class="container6flex">
+            <div class="container6fleximg">
+                <img src="img/5-3.webp" alt="">
+            </div>
+        </div>
+        <div class="container6flex">
+            <div class="container6flexText">
+                <h2>선명한 4K 그래픽을 경험하세요.</h2><br>
+                <p>4K TV와 호환 PS5 게임에서 정교한 디테일을 생생하게 느껴볼 수 있습니다.</p>
+            </div>
+        </div>
+    </div>
+
     <div id="container3">
         <div class="container3flex">
             <div class="container3flexText1">
@@ -150,6 +167,18 @@
             </div>
         </div>
 
+    </div>
+
+    <div id="container7">
+        <div class="container7flex"></div>
+        <div class="container7flex">
+            <div class="container7fleximg">
+            </div>
+        </div>
+        <div class="container7flex">
+            <div class="container7flexText">
+            </div>
+        </div>
     </div>
 
 
@@ -197,6 +226,12 @@
             $('.container5flexText').stop().fadeOut();
         });
 
+        $('.container6fleximg img').mouseover(function(){
+            $('.container6flexText').stop().fadeIn();
+        }).mouseleave(function(){
+            $('.container6flexText').stop().fadeOut();
+        });
+
         $('.container3fleximg').mouseover(function(){
             
             $('.container3fleximg').hide();
@@ -206,22 +241,18 @@
 
 
         $('#container3').hover(function(){
-            $('#container3').css({'background-color':'white'},700);
-            $('#container4').css({'background-color':'white'},700);
-            $('#container2').css({'background-color':'white'},700);
+
             $('.container2fleximg').hide();
-            $('.container3flexText1').stop().fadeIn(1000);
-            $('.container3flexText2').stop().fadeIn(1000);
+            $('.container3flexText1').stop().fadeIn(200);
+            $('.container3flexText2').stop().fadeIn(200);
             
         },function(){
-            $('#container3').css({'background-color':'black'},700);
-            $('#container2').css({'background-color':'black'},700);
-            $('#container4').css({'background-color':'black'},700);
+
             $('.container3fleximg').fadeIn();
             $('.container3fleximg2').hide();
             $('.container2fleximg').fadeIn();
-            $('.container3flexText1').stop().fadeOut(1000);
-            $('.container3flexText2').stop().fadeOut(1000);
+            $('.container3flexText1').stop().fadeOut(200);
+            $('.container3flexText2').stop().fadeOut(200);
         });
 
 
@@ -260,35 +291,61 @@
 
             $('.container5flex:nth-child(1)').css('height',st-2500);                
             $('.container5flex:nth-child(3)').css('height',st-2500);
+
+            $('.container6flex:nth-child(1)').css('height',st-3100);                
+            $('.container6flex:nth-child(3)').css('height',st-3100);
+
+            $('.container3flex:nth-child(1)').css('height',st-3800);                
+            $('.container3flex:nth-child(3)').css('height',st-3800);
             
+            $('.container7flex:nth-child(1)').css('height',st-4500);                
+            $('.container7flex:nth-child(3)').css('height',st-4500);
             
 
         
         });
+        
 
-        $(window).scroll(function(){
-            $('#animate1').each(function(){
-            
-            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-                if( bottom_of_window > bottom_of_element ){
-                    $('#container3').css({'background-color':'black'},1000);
-                    $('#container1').css({'background-color':'black'},1000);
-                    $('#container2').css({'background-color':'black'},1000);
-                    $('#container4').css({'background-color':'black'},1000);
-                    $('#container5').css({'background-color':'black'},1000);
-                    $('body').css({'background-color':'black'},1000);
-                    
-                }
-                else{
+    });
 
-                }
-                
-            
-            }); 
-        });
+    // let mainText = document.getElementById("container1")
+    window.addEventListener('scroll',function(){
+        let value1 = window.scrollY;
+        let value2 = window.scrollY;
+        console.log("scrollY",value1);
+    
+        var f = true
 
+        if(value1>300){
+                document.querySelector("body").style.background="black";
+                document.getElementById("container1").style.background="black";
+                document.getElementById("container2").style.background="black";
+                document.getElementById("container3").style.background="black";
+                document.getElementById("container4").style.background="black";
+                document.getElementById("container5").style.background="black";
+                document.getElementById("container6").style.background="black";
+                document.getElementById("container7").style.background="black";
+
+        }
+        if(value1<300){
+            document.querySelector("body").style.background="white";
+            document.getElementById("container1").style.background="white";
+            document.getElementById("container2").style.background="white";
+            document.getElementById("container3").style.background="white";
+            document.getElementById("container4").style.background="white";
+            document.getElementById("container5").style.background="white";
+            document.getElementById("container7").style.background="white";
+        }
+        if(value1>1200 && value1<1400){
+            document.querySelector(".container2fleximg").classList.add("tran")
+        }
+        if(value1>1500 ){
+            document.querySelector(".container2fleximg").classList.add("tran")
+        }
+
+
+
+    
     });
 </script>
 </body>
