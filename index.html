@@ -65,9 +65,18 @@
     <div id="container1">
         <div class="container1flex"></div>
         <div class="container1flex">
-            <h1 class="container1flexANI1">PLAY</h1>
-            <h1 class="container1flexANI2">STATION</h1>
-            <h1 class="container1flexANI3">5</h1>
+            <div class="container1flexText1">
+                <h1 class="container1flexANI1">Play</h1>
+            </div>
+            <div class="container1flexText2">
+                <h1 class="container1flexANI2">Station</h1>
+            </div>
+            <div class="container1flexText3">
+                <h1 class="container1flexANI3">5</h1>
+            </div>
+            
+            
+            
         </div>
         <div class="container1flex"></div>
     </div>
@@ -172,12 +181,47 @@
     <div id="container7">
         <div class="container7flex"></div>
         <div class="container7flex">
-            <div class="container7fleximg">
+            <div class="container7mainText">
+                <h1>5</h1>
             </div>
         </div>
         <div class="container7flex">
             <div class="container7flexText">
             </div>
+        </div>
+
+    </div>
+    <div id="container8">
+        <div class="container8flex"></div>
+        <div class="container8flex">
+            <div class="container8mainText1">
+                <h1 class="container8mainTextH1"> PlayStation5</h1><br><br>
+            </div>
+            <div class="container8mainText2">
+                <h1 class="container8mainTextH1">게임의 참된 힘을 경험해 보세요.</h1>
+            </div>
+                
+
+        </div>
+        <div class="container8flex">
+            <div class="container8flexText">
+            </div>
+        </div>
+    </div>
+
+    <div id="container9">
+        <div class="container9flex"></div>
+        <div class="container9flex">
+            <div class="container9mainText1">
+                <h1 class="container8mainTextH1">PlayStation 콘솔의 역사를 새로 쓰는 </h1>
+            </div>
+            <div class="container9mainText2">
+                <h1 class="container8mainTextH1" >커스텀 CPU,GPU,SSD와 통합 I/O 기반 SSD의 힘을 경험해보세요.</h1>
+            </div>
+            <button class="custom-btn btn-12"><span>Click!</span><span>Read More</span></button>
+        </div>
+        <div class="container9flex">
+
         </div>
     </div>
 
@@ -265,12 +309,12 @@
     // 스크롤효과
         $(window).scroll(function(){
             var st = $(this).scrollTop();
-            if($(this).scrollTop()>='200'){
-                $('.container1flexANI1').animate({'opacity':'1','margin':'0'},1500);
-                $('.container1flexANI2').animate({'opacity':'1','margin':'0'},1500);
-                $('.container1flexANI3').animate({'opacity':'1','margin':'0'},1500);
-            }
-            
+            // if($(this).scrollTop()>='400'){
+            //     $('.container1flexANI1').animate({'opacity':'1','margin':'0'},1500);
+            //     $('.container1flexANI2').animate({'opacity':'1','margin':'0'},1500);
+            //     $('.container1flexANI3').animate({'opacity':'1','margin':'0'},1500);
+            // }
+     
             
             // if($(this).scrollTop()>='300'){
             //     $('body').css({'background-color':'black'},1000);
@@ -300,6 +344,12 @@
             
             $('.container7flex:nth-child(1)').css('height',st-4500);                
             $('.container7flex:nth-child(3)').css('height',st-4500);
+
+            $('.container8flex:nth-child(1)').css('height',st-5500);                
+            $('.container8flex:nth-child(3)').css('height',st-5500);
+
+            $('.container9flex:nth-child(1)').css('height',st-6300);                
+            $('.container9flex:nth-child(3)').css('height',st-6300);
             
 
         
@@ -317,14 +367,16 @@
         var f = true
 
         if(value1>300){
-                document.querySelector("body").style.background="black";
-                document.getElementById("container1").style.background="black";
-                document.getElementById("container2").style.background="black";
-                document.getElementById("container3").style.background="black";
-                document.getElementById("container4").style.background="black";
-                document.getElementById("container5").style.background="black";
-                document.getElementById("container6").style.background="black";
-                document.getElementById("container7").style.background="black";
+            document.querySelector("body").style.background="black";
+            document.getElementById("container1").style.background="black";
+            document.getElementById("container2").style.background="black";
+            document.getElementById("container3").style.background="black";
+            document.getElementById("container4").style.background="black";
+            document.getElementById("container5").style.background="black";
+            document.getElementById("container6").style.background="black";
+            document.getElementById("container7").style.background="black";
+            document.getElementById("container8").style.background="black";
+            document.getElementById("container9").style.background="black";
 
         }
         if(value1<300){
@@ -335,14 +387,91 @@
             document.getElementById("container4").style.background="white";
             document.getElementById("container5").style.background="white";
             document.getElementById("container7").style.background="white";
-        }
-        if(value1>1200 && value1<1400){
-            document.querySelector(".container2fleximg").classList.add("tran")
-        }
-        if(value1>1500 ){
-            document.querySelector(".container2fleximg").classList.add("tran")
+            document.getElementById("container8").style.background="white";
+            document.getElementById("container9").style.background="white";
         }
 
+        if(value1>400){
+            document.querySelector(".container1flexText1 h1").classList.replace('container1flexANI1','transform3dZero') 
+        }
+        if(value1>500){
+            document.querySelector(".container1flexText2 h1").classList.replace('container1flexANI2','transform3dZero') 
+        }
+        if(value1>600){
+            document.querySelector(".container1flexText3 h1").classList.replace('container1flexANI3','transform3dZero') 
+        }
+
+        if(value1>1400 ){
+            document.querySelector(".container2fleximg").classList.add("tran")
+            document.querySelector(".container2fleximg").classList.remove("tranRemove")
+        }
+        if(value1>1700 ){
+            document.querySelector(".container2fleximg").classList.remove("tran")
+            document.querySelector(".container2fleximg").classList.add("tranRemove")
+        }
+
+        if(value1>2000 && value1<2200){
+            document.querySelector(".container4fleximg").classList.add("tran")
+            document.querySelector(".container4fleximg").classList.remove("tranRemove")
+        }
+
+        if(value1>2200 ){
+            document.querySelector(".container4fleximg").classList.remove("tran")
+            document.querySelector(".container4fleximg").classList.add("tranRemove")
+        }
+
+        if(value1>2600 && value1<2800){
+            document.querySelector(".container5fleximg").classList.add("tran")
+            document.querySelector(".container5fleximg").classList.remove("tranRemove")
+        }
+
+        if(value1>2800 ){
+            document.querySelector(".container5fleximg").classList.remove("tran")
+            document.querySelector(".container5fleximg").classList.add("tranRemove")
+        }
+
+        if(value1>3300 && value1<3500){
+            document.querySelector(".container6fleximg").classList.add("tran")
+            document.querySelector(".container6fleximg").classList.remove("tranRemove")
+        }
+        
+        if(value1>3600 ){
+            document.querySelector(".container6fleximg").classList.remove("tran")
+            document.querySelector(".container6fleximg").classList.add("tranRemove")
+        }
+        if(value1>5200){
+            document.querySelector(".container7mainText h1").classList.add("transform3d1")
+        }
+        if(value1>5300){
+            document.querySelector(".container7mainText h1").classList.add("transform3d2")
+        }
+        if(value1>5400){
+            document.querySelector(".container7mainText h1").classList.add("transform3d3")
+        }
+        if(value1>5500){
+            document.querySelector(".container7mainText h1").classList.add("transform3d4")
+        }
+        if(value1>5600){
+            document.querySelector(".container7mainText h1").classList.add("transform3d5")
+        }
+        if(value1>5700){
+            document.querySelector(".container7mainText h1").classList.add("transform3d6")
+        }
+
+        if(value1>5900){
+            document.querySelector(".container8mainText1 h1").classList.replace('container8mainTextH1','transform3dZero') 
+        }
+
+        if(value1>6000){
+            document.querySelector(".container8mainText2 h1").classList.replace('container8mainTextH1','transform3dZero') 
+        }
+
+        if(value1>6300){
+            document.querySelector(".container9mainText1 h1").classList.replace('container8mainTextH1','transform3dZero2') 
+        }
+        if(value1>6400){
+            document.querySelector(".container9mainText2 h1").classList.replace('container8mainTextH1','transform3dZero2') 
+        }
 
 
     
