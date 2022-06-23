@@ -213,17 +213,79 @@
         <div class="container9flex"></div>
         <div class="container9flex">
             <div class="container9mainText1">
-                <h1 class="container8mainTextH1">PlayStation 콘솔의 역사를 새로 쓰는 </h1>
+                <h1 class="container9mainTextH1">여기에서 여러분의 여정이 <br>시작됩니다. </h1>
             </div>
-            <div class="container9mainText2">
+
+            <!-- <div class="container9mainText2">
                 <h1 class="container8mainTextH1" >커스텀 CPU,GPU,SSD와 통합 I/O 기반 SSD의 힘을 경험해보세요.</h1>
-            </div>
-            <button class="custom-btn btn-12"><span>Click!</span><span>Read More</span></button>
+            </div> -->
+            
         </div>
         <div class="container9flex">
 
         </div>
     </div>
+
+    <div id="container10">
+        <div class="container10Video">
+            <img src="img/10-1.jpg" alt="">      
+        </div>
+    </div>
+
+    <div id="container11">
+        <div class="container11flex"></div>
+        <div class="container11flex">
+            <div class="container11mainText1">
+                
+            </div>
+
+            <!-- <div class="container9mainText2">
+                <h1 class="container8mainTextH1" >커스텀 CPU,GPU,SSD와 통합 I/O 기반 SSD의 힘을 경험해보세요.</h1>
+            </div> -->
+            
+        </div>
+        <div class="container11flex">
+
+        </div>
+        <div class="container11img">
+            <img src="img/ps4-logo-1-removebg-preview.png" alt="">
+        </div>
+        <div class="container11Text">
+            <h1>PS5에서 4,000가지가 넘는 PS4™ 게임을 플레이하세요.</h1>
+            <p>하위 호환되므로 좋아하는 PS4 및 PS VR타이틀로 다시 돌아갈 수 있습니다.</p>
+        </div>
+
+        <div class="container11Text2">
+            <h1>개선된 타격감을 다시 느껴보세요.</h1>
+            <p>게임 부스트로, 지원되는 PS4 및 PS VR 게임에서 더욱 빠르고 부드러운 프레임 레이트를 누릴 수 있습니다.</p>
+        </div>
+    </div>
+
+    <div id="container12">
+    
+        <div class="container12flex">
+            <div class="container12mainText1">
+                <h1 >PS5 독점게임 </h1>
+            </div>
+        </div>
+        <div class="container12Slidewrap">
+            <div class="container12Slide">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+
+
 
 
 <script>
@@ -350,6 +412,9 @@
 
             $('.container9flex:nth-child(1)').css('height',st-6300);                
             $('.container9flex:nth-child(3)').css('height',st-6300);
+
+            $('.container11flex:nth-child(1)').css('height',st-7800);                
+            $('.container11flex:nth-child(3)').css('height',st-7800);
             
 
         
@@ -377,6 +442,8 @@
             document.getElementById("container7").style.background="black";
             document.getElementById("container8").style.background="black";
             document.getElementById("container9").style.background="black";
+            document.getElementById("container11").style.background="black";
+            document.getElementById("container12").style.background="black";
 
         }
         if(value1<300){
@@ -389,6 +456,8 @@
             document.getElementById("container7").style.background="white";
             document.getElementById("container8").style.background="white";
             document.getElementById("container9").style.background="white";
+            document.getElementById("container11").style.background="white";
+            document.getElementById("container12").style.background="white";
         }
 
         if(value1>400){
@@ -466,12 +535,48 @@
             document.querySelector(".container8mainText2 h1").classList.replace('container8mainTextH1','transform3dZero') 
         }
 
-        if(value1>6300){
-            document.querySelector(".container9mainText1 h1").classList.replace('container8mainTextH1','transform3dZero2') 
+        if(value1>6500){
+            document.querySelector(".container9mainText1 h1").classList.replace('container9mainTextH1','transform3dSmall1') 
         }
-        if(value1>6400){
-            document.querySelector(".container9mainText2 h1").classList.replace('container8mainTextH1','transform3dZero2') 
+
+        if(value1>6600){
+            document.querySelector(".container9mainText1 h1").classList.replace('transform3dSmall1','transform3dSmall2') 
         }
+        if(value1>6700){
+            document.querySelector(".container9mainText1 h1").classList.replace('transform3dSmall2','transform3dSmall3') 
+        }
+
+    
+        if(value1>6900){
+            document.querySelector("#container10 div").classList.replace('container10Video','container10Video2') 
+        }
+        if(value1>7000){
+            document.querySelector("#container10 div").classList.replace('container10Video2','container10Video3') 
+        }
+        if(value1>7100){
+            document.querySelector("#container10 div").classList.replace('container10Video3','container10Video4') 
+        }
+        if(value1>7200){
+            document.querySelector("#container10 div").classList.replace('container10Video4','container10Video5') 
+        }
+        if(value1>7300){
+            document.querySelector("#container10 div").classList.replace('container10Video5','container10Video6') 
+        }
+        if(value1>=7400,value1=!7300){
+            document.querySelector("#container10 div").classList.replace('container10Video6','container10Video7')
+            
+        }
+
+
+
+
+
+
+
+
+        // if(value1>6400){
+        //     document.querySelector(".container9mainText2 h1").classList.replace('container8mainTextH1','transform3dZero2') 
+        // }
 
 
     
