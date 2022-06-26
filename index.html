@@ -271,12 +271,23 @@
         <div class="container12Slidewrap">
             <div class="container12Slide">
                 <ul>
-                    <li></li>
+                    <li>
+                        <img src="img/spiderman-miles-morales-202011610582475_2.jpg" alt="">
+                        <h1>Marvel's Spider-Man: Miles Morales</h1>
+                        <p>새로운 영웅으로 활약하는 마일즈 모랄레스가 놀랍도록 폭발적인 새로운 힘을 자기 것으로 만들면서 스파이더맨으로 우뚝 서는 과정을 직접 경험하세요</p>
+                    </li>
                     <li></li>
                     <li></li>
                     <li></li>
                 </ul>
+                <div class="radiobt">
+                    <button type="button" class="btn1"></button>
+                    <button type="button" class="btn2"></button>
+                    <button type="button" class="btn3"></button>
+                    <button type="button" class="btn4"></button>
+                </div>
             </div>
+            
 
         </div>
 
@@ -361,6 +372,13 @@
             $('.container3flexText2').stop().fadeOut(200);
         });
 
+        $('.btn2').click(function(){
+            $('.container12Slide li:nth-child(1)').animate({'margin-left':'1%','height':'40%'},1000);
+            // $('.container12Slide li:nth-child(1)').animate({'transform':'scale3d(0.5, 1, 1)'},1000);
+        });
+        $('.btn1').click(function(){
+            $('.container12Slide li:nth-child(1)').animate({'margin-left':'11.5%'},1000); 
+        });
 
 
 
@@ -564,8 +582,9 @@
         }
         if(value1>=7400,value1=!7300){
             document.querySelector("#container10 div").classList.replace('container10Video6','container10Video7')
-            
         }
+
+
 
 
 
