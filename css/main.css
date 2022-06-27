@@ -186,7 +186,7 @@ p{font-family: 'YUniverse-B';}
 
 .transform3dSmall1{transform:scale3d(1, 1, 1) ; transform-style: preserve-3d; opacity: 0.4; transition:transform 1s,opacity 1s;} 
 .transform3dSmall2{transform:scale3d(2, 2, 2) ; transform-style: preserve-3d; opacity: 0.6; transition:transform 1s,opacity 1s;} 
-.transform3dSmall3{transform:scale3d(2.5,2.5,2.5) ; transform-style: preserve-3d; opacity: 1; transition:transform 1s,opacity 1s;} 
+.transform3dSmall3{transform:scale3d(2.0,2.5,2.5) ; transform-style: preserve-3d; opacity: 1; transition:transform 1s,opacity 1s;} 
 
 
 
@@ -526,12 +526,16 @@ p{font-family: 'YUniverse-B';}
 
 /* .container8mainText h1{font-size: 100px;transition:transform 1s,opacity 1s; transform:translate3d(0px, 120%, 0px) ; transform-style: preserve-3d; } */
 
-.container11Text{width: 50%; height: 200px; position: absolute; margin-top: 140px; color: white; padding: 40px;  font-size: 30px; text-align: right;}
-.container11Text P{font-size: 20px; margin-top: 20px;}
-.container11img{width: 13%;height: 20%; position: absolute; top: 5%; left: 10%;}
+.container11Text{width: 50%; height: 300px; position: absolute; margin-top: 140px; color: white; padding: 40px;  font-size: 30px; text-align: right;overflow: hidden; }
+.container11Text P{font-size: 20px; margin-top: 20px;  transition: transform 1s;}
+
+.container11Text h1{font-size: 60px;transition: transform 1s;}
+.container11img{width: 13%;height: 20%; position: absolute; top: 5%; left: 10%; }
 
 .container11Text2{left: 50%; width: 50%; height: 200px; position: absolute; margin-top: 400px; color: white; padding: 70px;  font-size: 30px; text-align: right;}
 .container11Text2 P{font-size: 17px; margin-top: 20px;}
+.container11Text2 h1{font-size: 60px;}
+
 
 
 #container12{
@@ -552,13 +556,58 @@ p{font-family: 'YUniverse-B';}
 
 .container12mainText1{margin-top: 50px; width: 100%; }
 .container12mainText1 h1{font-size: 50px;}
-.container12Slide{width: 100%; height: 700px; background-color: white;  overflow: hidden;}
+.container12Slide{width: 100%; height: 700px; background-color: black;   overflow: hidden; position: relative; }
 
-.container12Slide ul{width: 300%; height: 100%; background-color: red;}
-.container12Slide li{ width: 10%; height: 80%; margin-top:30px; padding-bottom: 3%; background-color: aliceblue; float: left; margin-right: 50px;}
-.container12Slide li:nth-child(1){margin-left: 11.5%;}
+.container12Slide ul{width: 300%; height: 100%; background-color: black; position: absolute;}
+.container12Slide li{background-color: black; color: white; transition: transform 0.5s; width: 10%; height: 80%;padding-bottom: 3%; border-radius: 20px 20px 20px 20px;  float: left; margin-right: 50px; z-index: 0;}
 
-.radiobt{width: 100%; height: 50px; text-align: center;  margin-top: -50px;}
+.container12Slide li img{border-radius: 20px 20px 0 0 ;}
+.container12Slide li:nth-child(1){margin-left: 11.5%; }
+.container12Slide li:nth-child(2){ margin-top: 130px; opacity: 0.5;} 
+.container12Slide li:nth-child(3){ margin-top: 130px; opacity: 0.5;}
+.container12Slide li:nth-child(4){ margin-top: 130px; opacity: 0.5;}
+
+.container12Slide li:nth-child(2) >div{opacity: 0;}
+.container12Slide li:nth-child(3) >div{opacity: 0;}
+.container12Slide li:nth-child(4) >div{opacity: 0;}
+.container12Slide li div > h1{margin-top: 30px;}
+.container12Slide li div >p{margin-top: 30px;}
+
+.radiobt{width: 100%; height: 50px; text-align: center;}
 .radiobt button{width: 20px; height: 20px; border-radius: 50%; border: 0px; cursor: pointer; background-color: #999; }
 .radiobt button:hover{opacity: 0.4; transition: 0.3s; }
 .radiobt button:nth-child(1){background-color: rgb(109, 109, 109);}
+
+
+#container13{
+  width: 100%; 
+  height: 900px;
+  opacity: 1;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  transition: 1s;
+  margin-top: 200px;
+  
+}
+.container13flex{ height: 100%; max-height: 900px;color: white; text-align: center;
+}
+.container13flex:nth-child(1){ width: 27.5%;border-right: 1px solid white;height: 0%;
+}
+.container13flex:nth-child(2){width: 45%; 
+}
+
+.container13flex:nth-child(3){width: 27.5%;border-left: 1px solid white;height: 0%;
+}
+.container13flexText{margin-top: 350px; text-align: center; display: none; padding: 30px; text-align: center; transform: translate3d(-33.5511vw, 0px, 0px) scale3d(3.66508, 3.66508, 1) ;  }
+.container13mainText{margin-top: 200px; width: 100%;   text-align: center;}
+
+.container13Img{ display: none;}
+.container13Img img{ transform-style: preserve-3d; transform-style: preserve-3d; transform: scale3d(1.8,1.6,1) rotate(30deg);   transition: transform 1s;}
+
+
+footer{background-color: blue; width: 100%; height: 500px;}
+
+
+
+

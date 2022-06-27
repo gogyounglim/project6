@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PlayStation5</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <style>
@@ -251,13 +251,13 @@
             <img src="img/ps4-logo-1-removebg-preview.png" alt="">
         </div>
         <div class="container11Text">
-            <h1>PS5에서 4,000가지가 넘는 PS4™ 게임을 플레이하세요.</h1>
-            <p>하위 호환되므로 좋아하는 PS4 및 PS VR타이틀로 다시 돌아갈 수 있습니다.</p>
+            <h1 class="container1flexANI1">PS5에서 4,000가지가 넘는 PS4™ 게임을 플레이하세요.</h1>
+            <p class="container1flexANI1">하위 호환되므로 좋아하는 PS4 및 PS VR타이틀로 다시 돌아갈 수 있습니다.</p>
         </div>
 
         <div class="container11Text2">
-            <h1>개선된 타격감을 다시 느껴보세요.</h1>
-            <p>게임 부스트로, 지원되는 PS4 및 PS VR 게임에서 더욱 빠르고 부드러운 프레임 레이트를 누릴 수 있습니다.</p>
+            <h1 class="container1flexANI2">개선된 타격감을 다시 느껴보세요.</h1>
+            <p class="container1flexANI2">게임 부스트로, 지원되는 PS4 및 PS VR 게임에서 더욱 빠르고 부드러운 프레임 레이트를 누릴 수 있습니다.</p>
         </div>
     </div>
 
@@ -273,25 +273,72 @@
                 <ul>
                     <li>
                         <img src="img/spiderman-miles-morales-202011610582475_2.jpg" alt="">
-                        <h1>Marvel's Spider-Man: Miles Morales</h1>
+                        
+                        <div class="liText">
+                            <h1>Marvel's Spider-Man: Miles Morales</h1>
                         <p>새로운 영웅으로 활약하는 마일즈 모랄레스가 놀랍도록 폭발적인 새로운 힘을 자기 것으로 만들면서 스파이더맨으로 우뚝 서는 과정을 직접 경험하세요</p>
+                        </div>
                     </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        <img src="img/horai.jpg" alt="">
+                        <div class="liText">
+                            <h1>호라이즌: 포비든 웨스트</h1>
+                            <p>많은 찬사를 받은 Horizon Zero Dawn의 속편에서 새롭고 신비로운 위협이 도사리고 있는 웅장하고 위험한 지역인 서부 금역을 에일로이와 함께 탐험하세요.</p>
+                        </div>
+                       
+                    </li>
+                    
+                    <li>
+                        <img src="img/gran.jpg" alt="">
+                        <div class="liText">
+                            <h1>그란 투리스모7</h1>
+                            <p>그란 투리스모 7에서는 여러 세대에 걸친 레이싱 시뮬레이션 경험으로 사상 최고의 모습들을 만날 수 있습니다.</p>
+
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/elden.jpg" alt="">
+                        <div class="liText">
+                            <h1>ELDEN RING</h1>
+                            <p>Bloodborne과 Dark Souls 제작사에서 만든, 찬사를 받은 새로운 오픈 월드 어드벤처에서 엘든 링의 힘을 휘두르고 틈새의 땅에서 엘데의 왕이 되세요.</p>
+
+                        </div>
+                    </li>
+
                 </ul>
-                <div class="radiobt">
-                    <button type="button" class="btn1"></button>
-                    <button type="button" class="btn2"></button>
-                    <button type="button" class="btn3"></button>
-                    <button type="button" class="btn4"></button>
-                </div>
+
             </div>
             
+        </div>
+        <div class="radiobt">
+            <button type="button" class="btn1"></button>
+            <button type="button" class="btn2"></button>
+            <button type="button" class="btn3"></button>
+            <button type="button" class="btn4"></button>
+        </div>
+
+
+
+    </div>
+    <div id="container13">
+        <div class="container13flex"></div>
+        <div class="container13flex">
+            <div class="container13Img">
+                <img src="img/horai.jpg" alt="">
+            </div>
+
+            
+        </div>
+        <div class="container13flex">
 
         </div>
 
     </div>
+    <footer>
+        
+    </footer>
+    
+
 
     
 
@@ -372,14 +419,69 @@
             $('.container3flexText2').stop().fadeOut(200);
         });
 
-        $('.btn2').click(function(){
-            $('.container12Slide li:nth-child(1)').animate({'margin-left':'1%','height':'40%'},1000);
-            // $('.container12Slide li:nth-child(1)').animate({'transform':'scale3d(0.5, 1, 1)'},1000);
-        });
-        $('.btn1').click(function(){
-            $('.container12Slide li:nth-child(1)').animate({'margin-left':'11.5%'},1000); 
-        });
 
+        $('.btn1').click(function(){
+            $('.container12Slide ul').stop().animate({'left':'0px'},1000);
+            $('.container12Slide li:nth-child(1)').stop().animate({'margin-top':'0','opacity':'1'},1000);
+            $('.container12Slide li:nth-child(2)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(3)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(4)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(1)').css({'top':'0'});
+            $('.container12Slide li:nth-child(2)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(4)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(5)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(1) > div').stop().animate({'opacity':'1'},1000);
+            $('.container12Slide li:nth-child(2) > div').stop().animate({'opacity':'0'},1000);
+            $('.container12Slide li:nth-child(3) > div').stop().animate({'opacity':'0'},1000);
+            $('.container12Slide li:nth-child(4) > div').stop().animate({'opacity':'0'},1000);
+        });
+        $('.btn2').click(function(){
+            $('.container12Slide ul').stop().animate({'left':'-33%'},1000);
+            $('.container12Slide li:nth-child(1)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(2)').stop().animate({'margin-top':'0','opacity':'1'},1000);
+            $('.container12Slide li:nth-child(3)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(4)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(1)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(2)').css({'top':'0'});
+            $('.container12Slide li:nth-child(4)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(3)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(2) > div').stop().animate({'opacity':'1'},1000);
+            $('.container12Slide li:nth-child(1) > div').stop().animate({'opacity':'0'},1000);
+            $('.container12Slide li:nth-child(3) > div').stop().animate({'opacity':'0'},1000);
+            $('.container12Slide li:nth-child(4) > div').stop().animate({'opacity':'0'},1000);
+        });
+        $('.btn3').click(function(){
+            $('.container12Slide ul').stop().animate({'left':'-63%'},1000);
+            
+            $('.container12Slide li:nth-child(1)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(3)').stop().animate({'margin-top':'0','opacity':'1'},1000);
+            $('.container12Slide li:nth-child(2)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(4)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(1)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(2)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(4)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(3)').css({'top':'0'});
+            $('.container12Slide li:nth-child(3) > div').stop().animate({'opacity':'1'},1000);
+            $('.container12Slide li:nth-child(2) > div').stop().animate({'opacity':'0'},1000);
+            $('.container12Slide li:nth-child(1) > div').stop().animate({'opacity':'0'},1000);
+            $('.container12Slide li:nth-child(4) > div').stop().animate({'opacity':'0'},1000);
+        });
+        $('.btn4').click(function(){
+     
+            $('.container12Slide ul').stop().animate({'left':'-97%'},1000);
+            $('.container12Slide li:nth-child(1)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(3)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(2)').stop().animate({'margin-top':'130px','opacity':'0.5'},1000);
+            $('.container12Slide li:nth-child(4)').stop().animate({'margin-top':'0','opacity':'1'},1000);
+            $('.container12Slide li:nth-child(1)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(2)').css({'top':'50%'});
+            $('.container12Slide li:nth-child(4)').css({'top':'0'});
+            $('.container12Slide li:nth-child(3)').css({'top':'5%0'});
+            $('.container12Slide li:nth-child(4) > div').stop().animate({'opacity':'1'},1000);
+            $('.container12Slide li:nth-child(2) > div').stop().animate({'opacity':'0'},1000);
+            $('.container12Slide li:nth-child(3) > div').stop().animate({'opacity':'0'},1000);
+            $('.container12Slide li:nth-child(1) > div').stop().animate({'opacity':'0'},1000);
+        });
 
 
 
@@ -389,21 +491,6 @@
     // 스크롤효과
         $(window).scroll(function(){
             var st = $(this).scrollTop();
-            // if($(this).scrollTop()>='400'){
-            //     $('.container1flexANI1').animate({'opacity':'1','margin':'0'},1500);
-            //     $('.container1flexANI2').animate({'opacity':'1','margin':'0'},1500);
-            //     $('.container1flexANI3').animate({'opacity':'1','margin':'0'},1500);
-            // }
-     
-            
-            // if($(this).scrollTop()>='300'){
-            //     $('body').css({'background-color':'black'},1000);
-            //     $('#container1').css({'background-color':'black'},1000);
-            //     $('#container2').css({'background-color':'black'},1000);
-            //     $('#container3').css({'background-color':'black'},1000);
-
-            // }
-
             $('.container1flex:nth-child(1)').css('height',st-700);                
             $('.container1flex:nth-child(3)').css('height',st-700);
 
@@ -580,9 +667,29 @@
         if(value1>7300){
             document.querySelector("#container10 div").classList.replace('container10Video5','container10Video6') 
         }
-        if(value1>=7400,value1=!7300){
+        if(value1>=7400,value1<7500){
             document.querySelector("#container10 div").classList.replace('container10Video6','container10Video7')
         }
+        if(value1>7900){
+            document.querySelector(".container11Text h1").classList.remove('container1flexANI1');
+            document.querySelector(".container11Text h1").classList.add('transform3dZero');
+        }
+        if(value1>8000){
+            document.querySelector(".container11Text p").classList.remove('container1flexANI1');
+            document.querySelector(".container11Text p").classList.add('transform3dZero');
+        }
+
+        if(value1>8200){
+            document.querySelector(".container11Text2 h1").classList.remove('container1flexANI2');
+            document.querySelector(".container11Text2 h1").classList.add('transform3dZero');
+        }
+
+        if(value1>8300){
+            document.querySelector(".container11Text2 p").classList.remove('container1flexANI2');
+            document.querySelector(".container11Text2 p").classList.add('transform3dZero');
+        }
+        
+
 
 
 
