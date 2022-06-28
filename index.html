@@ -15,11 +15,22 @@
 <body>
 
 
+    <div id="menubar">
+        <div class="menubarFlex">
 
+        </div>
+        <div class="menubarFlex"></div>
+        
+        <div class="menubarFlex"><img src="img/main/menu1.svg" alt=""></div>
+        <div class="menubarFlex"><img src="img/main/menu2.svg" alt=""></div>
+        <div class="menubarFlex"><img src="img/main/menu3.svg" alt=""></div>
+    </div>
     <div class="slideshow-container">
-
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
         <div class="mySlides fade">
-            
+
             <img src="img/1-1.png" style="width:100%" >
             <div class="text1">
                 <img src="img/1-2.png" alt="">
@@ -30,9 +41,9 @@
 
         <div class="mySlides fade">
             
-            <img src="img/the-last-of-us-part-i-hero-banner-desktop-01-en-18may22 (1).jfif" style="width:100%">
+            <img src="img/main/main2.jpg" style="width:100%">
             <div class="text2">
-                <img src="img/img-removebg-preview.png" alt=""><br>
+                <!-- <img src="img/img-removebg-preview.png" alt=""><br> -->
                 <h2>metacritic선정 2010년대 최고의 비디오 게임</h2><br>
                 <p>모든 것의 시작이 된 명작을 ps5에서 새롭게 경험하세요.</p><br>
                 <button class="container3Bt">자세히보기</button>
@@ -89,7 +100,7 @@
         </div>
         <div class="container2flex">
             <div class="container2flexText">
-                <h2>완전히 새로워진 playstation을 만나보세요</h2><br>
+                <h2>완전히 새로워진 playstation을 <br> 만나보세요</h2><br>
                 <p>환상적인 차세대 PlayStation 게임을 마음껏 즐겨보세요</p>
             </div>
         </div>
@@ -124,7 +135,7 @@
         <div class="container5flex">
             <div class="container5flexText">
                 <h2>생동감 있는 색상을 확인하세요.</h2><br>
-                <p>HDR TV를 연결하고 HDR 기술이 지원되는 PS5 게임을 플레이하면 
+                <p>HDR TV를 연결하고 HDR 기술이 지원되는<br> PS5 게임을 플레이하면 
                    <br> 믿기 힘들 정도의 컬러가 나타납니다.</p>
             </div>
         </div>
@@ -228,8 +239,13 @@
 
     <div id="container10">
         <div class="container10Video">
-            <img src="img/10-1.jpg" alt="">      
+            <img src="img/10-1.jpg" alt="">  
+            <div class="container10Text">
+                <h1>새로운 세계로 떠나는 모험!</h1>
+            </div>    
         </div>
+
+        
     </div>
 
     <div id="container11">
@@ -687,6 +703,9 @@
         if(value1>8300){
             document.querySelector(".container11Text2 p").classList.remove('container1flexANI2');
             document.querySelector(".container11Text2 p").classList.add('transform3dZero');
+        }
+        if(value1>8800){
+            document.querySelector(".container12Slide li:nth-child(1)");
         }
         
 
