@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayStation5</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <style>
         
@@ -31,7 +32,7 @@
         </div>
         <div class="mySlides fade">
 
-            <img src="img/1-1.png" style="width:100%" >
+            <img src="img/1-1.jpg" style="width:100%" >
             <div class="text1">
                 <img src="img/1-2.png" alt="">
                 <h1>완전히 새로워진 PlayStation5 소개</h1>
@@ -336,20 +337,42 @@
 
 
     </div>
-    <div id="container13">
-        <div class="container13flex"></div>
-        <div class="container13flex">
-            <div class="container13Img">
-                <img src="img/horai.jpg" alt="">
+
+
+    <section id="container13">
+        <div class="sec3">
+            <div class="sec3-wrap">
+                <div>
+                    <div class="container13Flex">
+                        <div class="container13FlexText2">
+                            <h1>PS5</h1>
+                            <P>Blu-ray 디스크로 PS5 및 PS4 게임을 플레이합니다. PlayStation Store에서 다운로드 버전의 PS% 및 PS4 게임을 다운로드할 수도 있습니다.</P>
+                        </div>
+                    </div>
+                    <div class="container13Flex">
+                        <div class="container13FlexText">
+                            <h1>플레이 방식을 선택해보세요.</h1>
+                        </div>
+                        <div class="container13Fleximg">
+                            <img src="img/main/13-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="container13Flex">
+                        <div class="container13FlexText3">
+                            <h1>PS5 Digital Edition</h1>
+                            <p>디스크 드라이브가 없는 PS5 콘솔의 올 디지털 버전입니다. PlayStation Network에 등록된 계정에
+                                로그인하고 PlayStation Store로 이동하여 다운로드 버전의 PS5 및 PS4 게임을 구매 및 다운로드하세요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>22</div>
+                <div>33</div>
+                <div>44</div>
+                <div>55</div>
             </div>
-
-            
         </div>
-        <div class="container13flex">
-
-        </div>
-
-    </div>
+    </section>
     <footer>
         
     </footer>
@@ -386,8 +409,25 @@
     }
 
 
-   
+    //스크롤시 화면옆으로 넘김
     $(function(){
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            const totalWidth = $(".sec3-wrap").width() - 300;
+            $("#container13").css("height", totalWidth);
+
+
+            // 3번째 섹션 스크롤탑 0
+            if( scrollTop > $("#container13").offset().top ){
+                let offsetTop = (scrollTop - $("#container13").offset().top);
+                // $("#section3 .sec3-wrap > div:nth-child(1)").css("background", "red")
+                $("#container13 .sec3").css("left", -offsetTop);
+            }
+
+    });
+
+
+
         $('.container2fleximg img').mouseover(function(){
             $('.container2flexText').stop().fadeIn();
         }).mouseleave(function(){
@@ -536,6 +576,9 @@
 
             $('.container11flex:nth-child(1)').css('height',st-7800);                
             $('.container11flex:nth-child(3)').css('height',st-7800);
+
+            $('.container13Flex:nth-child(1)').css('height',st-9300);                
+            $('.container13Flex:nth-child(3)').css('height',st-9300);
             
 
         
@@ -631,22 +674,36 @@
         }
         if(value1>5200){
             document.querySelector(".container7mainText h1").classList.add("transform3d1")
+        }else{
+            document.querySelector(".container7mainText h1").classList.remove("transform3d1")
         }
         if(value1>5300){
             document.querySelector(".container7mainText h1").classList.add("transform3d2")
+        }else{
+            document.querySelector(".container7mainText h1").classList.remove("transform3d2")
         }
         if(value1>5400){
             document.querySelector(".container7mainText h1").classList.add("transform3d3")
+        }else{
+            document.querySelector(".container7mainText h1").classList.remove("transform3d3")
         }
         if(value1>5500){
-            document.querySelector(".container7mainText h1").classList.add("transform3d4")
+            document.querySelector(".container7mainText h1").classList.remove("transform3d4")      
+        }else{
+            document.querySelector(".container7mainText h1").classList.remove("transform3d4")      
         }
-        if(value1>5600){
-            document.querySelector(".container7mainText h1").classList.add("transform3d5")
+        if(value1>5600 ){
+            document.querySelector(".container7mainText h1").classList.add("transform3d5") 
+        }else{
+            document.querySelector(".container7mainText h1").classList.remove("transform3d5") 
         }
-        if(value1>5700){
+        if(value1>5700 ){
             document.querySelector(".container7mainText h1").classList.add("transform3d6")
+        }else{
+            document.querySelector(".container7mainText h1").classList.remove("transform3d6")
+            
         }
+
 
         if(value1>5900){
             document.querySelector(".container8mainText1 h1").classList.replace('container8mainTextH1','transform3dZero') 
@@ -670,21 +727,33 @@
     
         if(value1>6900){
             document.querySelector("#container10 div").classList.replace('container10Video','container10Video2') 
+        }else{
+            document.querySelector("#container10 div").classList.replace('container10Video2','container10Video') 
         }
         if(value1>7000){
             document.querySelector("#container10 div").classList.replace('container10Video2','container10Video3') 
+        }else{
+            document.querySelector("#container10 div").classList.replace('container10Video3','container10Video2') 
         }
         if(value1>7100){
             document.querySelector("#container10 div").classList.replace('container10Video3','container10Video4') 
+        }else{
+            document.querySelector("#container10 div").classList.replace('container10Video4','container10Video3') 
         }
         if(value1>7200){
             document.querySelector("#container10 div").classList.replace('container10Video4','container10Video5') 
+        }else{
+            document.querySelector("#container10 div").classList.replace('container10Video5','container10Video4') 
         }
         if(value1>7300){
             document.querySelector("#container10 div").classList.replace('container10Video5','container10Video6') 
+        }else{
+            document.querySelector("#container10 div").classList.replace('container10Video6','container10Video5') 
         }
-        if(value1>=7400,value1<7500){
+        if(value1>=7400){
             document.querySelector("#container10 div").classList.replace('container10Video6','container10Video7')
+        }else{
+            document.querySelector("#container10 div").classList.replace('container10Video7','container10Video6')
         }
         if(value1>7900){
             document.querySelector(".container11Text h1").classList.remove('container1flexANI1');
@@ -707,15 +776,21 @@
         if(value1>8800){
             document.querySelector(".container12Slide li:nth-child(1)");
         }
+        if(value1>9900){
+            document.querySelector(".container13Fleximg").style.opacity="0";
+            document.querySelector(".container13FlexText").style.opacity="0";
+            document.querySelector(".container13FlexText2").style.opacity="0";
+            document.querySelector(".container13FlexText3").style.opacity="0";
+            
+            
+        }
+        if(value1>10000){
+            document.querySelector(".container13Fleximg").style.opacity="1";
+            document.querySelector(".container13FlexText").style.opacity="1";
+            document.querySelector(".container13FlexText2").style.opacity="1";
+            document.querySelector(".container13FlexText3").style.opacity="1";
+        }
         
-
-
-
-
-
-
-
-
 
 
 
@@ -726,6 +801,7 @@
 
     
     });
+
 </script>
 </body>
 </html>
