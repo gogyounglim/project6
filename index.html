@@ -14,11 +14,18 @@
     </style>
 </head>
 <body>
-
+    <div id="menu">
+        <div class="menuText">
+            <div class="menuTextFlex"></div>
+            <div class="menuTextFlex"></div>
+            <div class="menuTextFlex"></div>
+            <div class="menuTextFlex"></div>
+        </div>
+    </div>
 
     <div id="menubar">
         <div class="menubarFlex">
-
+            
         </div>
         <div class="menubarFlex"></div>
         
@@ -27,6 +34,7 @@
         <div class="menubarFlex"><img src="img/main/menu3.svg" alt=""></div>
     </div>
     <div class="slideshow-container">
+        
         <div class="logo">
             <img src="img/logo.png" alt="">
         </div>
@@ -347,6 +355,7 @@
                         <div class="container13FlexText2">
                             <h1>PS5</h1>
                             <P>Blu-ray 디스크로 PS5 및 PS4 게임을 플레이합니다. PlayStation Store에서 다운로드 버전의 PS% 및 PS4 게임을 다운로드할 수도 있습니다.</P>
+                            <button class="custom-btn2 btn-5"><span>자세히보기</span></button>
                         </div>
                     </div>
                     <div class="container13Flex">
@@ -361,12 +370,34 @@
                         <div class="container13FlexText3">
                             <h1>PS5 Digital Edition</h1>
                             <p>디스크 드라이브가 없는 PS5 콘솔의 올 디지털 버전입니다. PlayStation Network에 등록된 계정에
-                                로그인하고 PlayStation Store로 이동하여 다운로드 버전의 PS5 및 PS4 게임을 구매 및 다운로드하세요.
+                                로그인하고 PlayStation Store로 이동하여 다운로드 버전의 PS5 및 PS4 게임을 구매 및 다운로드하세요.\
                             </p>
+                            <button class="custom-btn btn-5"><span>자세히보기</span></button>
                         </div>
                     </div>
                 </div>
-                <div>22</div>
+                <div class="container13Flex2">
+                    <div>
+                        <video  src="img/main/13-2video.mp4" autoplay loop muted></video>
+                    </div>
+                    <div class="container13Flex2-1">
+                        <div>
+                            <h1>PULSE 3D 무선 헤드셋</h1>
+                            <p>PS5용 PULSE 3D 무선 헤드셋으로 차세대 게이밍 오디오를 즐기세요.</p>
+                            <button class="custom-btn btn-6"><span>Pulse3D 기능 살펴보기</span></button>
+                        </div>
+                        <div>
+                            <h1>차세대 오디오 경험을 위한 설계</h1>
+                            <h2>3D 오디오1에 최적화된 세심한 설계</h2><br>
+                            <p>PULSE 3D 무선 헤드셋은 PlayStation®5 콘솔에 3D 오디오를 구현하기 위해 특별히 세심하게 제작되었습니다. <br>
+                                
+
+                                Tempest 3D AudioTech 기반의 PS5 콘솔은 모든 방향에서 들려오는 것처럼 몰입감이 우수한 음장을 구현합니다.</p><br><br>
+                            <h2>세심한 디자인</h2><br>
+                            <p>PS5 콘솔과 완벽하게 어울리는 세련된 헤드셋 디자인으로 스타일을 살려주고 정교하게 제작된 이어패드와 헤드밴드 스트랩이 편안함을 더해줍니다.</p>
+                        </div>
+                    </div>
+                </div>
                 <div>33</div>
                 <div>44</div>
                 <div>55</div>
@@ -427,6 +458,9 @@
     });
 
 
+        $('.menubarFlex:nth-child(1)').click(function(){
+            $('#menu').css('display','block');
+        });
 
         $('.container2fleximg img').mouseover(function(){
             $('.container2flexText').stop().fadeIn();
