@@ -148,6 +148,10 @@
             <div class="container2fleximg">
                 <img class="img2" src="img/bff196cd80b7c.jpg" alt="">
             </div>
+            <div class="container2flexTextMobile">
+                <h2>완전히 새로워진 playstation을 <br> 만나보세요</h2><br>
+                <p>환상적인 차세대 PlayStation 게임을 마음껏 즐겨보세요</p>
+            </div>
         </div>
         <div class="container2flex">
             <div class="container2flexText">
@@ -162,14 +166,16 @@
         <div class="container4flex">
             <div class="container4fleximg">
                 <img src="img/5-1.jfif" alt="">
+                <div class="container4flexTextMobile">
+                    <h2>레이 트레이싱으로 <br> 실제와 같은 환경을 둘러보세요.</h2><br>
+                    <p>레이 트레이싱은 기능을 지원하는 PS5 게임에서 자연스러운 그림자와 빛 반사 효과를 통해 새로운 차원의 현실감을 압도적인 성능으로 선사 합니다.</p>
+                </div>
             </div>
         </div>
         <div class="container4flex">
             <div class="container4flexText">
                 <h2>레이 트레이싱으로 <br> 실제와 같은 환경을 둘러보세요.</h2><br>
                 <p>레이 트레이싱은 기능을 지원하는 PS5 게임에서 자연스러운 그림자와 빛 반사 효과를 통해 새로운 차원의 현실감을 압도적인 성능으로 선사 합니다.</p>
-          
-
             </div>
         </div>
 
@@ -181,6 +187,11 @@
         <div class="container5flex">
             <div class="container5fleximg">
                 <img src="img/5-4.webp" alt="">
+                <div class="container5flexTextMobile">
+                    <h2>생동감 있는 색상을 확인하세요.</h2><br>
+                    <p>HDR TV를 연결하고 HDR 기술이 지원되는<br> PS5 게임을 플레이하면 
+                       <br> 믿기 힘들 정도의 컬러가 나타납니다.</p>
+                </div>
             </div>
         </div>
         <div class="container5flex">
@@ -197,6 +208,10 @@
         <div class="container6flex">
             <div class="container6fleximg">
                 <img src="img/5-3.webp" alt="">
+                <div class="container6flexTextMobile">
+                    <h2>선명한 4K 그래픽을 경험하세요.</h2><br>
+                    <p>4K TV와 호환 PS5 게임에서 정교한 디테일을 생생하게 느껴볼 수 있습니다.</p>
+                </div>
             </div>
         </div>
         <div class="container6flex">
@@ -218,11 +233,28 @@
 
         </div>
         <div class="container3flex">
+            <div class="container3flexText1Mobile">
+                <h1>DualSens™</h1><br>
+                <h1>무선 컨트롤러</h1><br>
+                <p>새로운 센세이션을 맞이하기 위한 진화</p>
+                
+            </div>
             <div class="container3fleximg">
                 <img src="img/ImmersiveControl-Controller-Front@2x.webp" alt="">
             </div>
             <div class="container3fleximg2">
                 <img src="img/Controller-XL@2x.webp" alt="">
+            </div>
+
+            <div class="container3flexText2Mobile">
+                <h1>적응형 트리거</h1><br>
+                <p>다이나믹 저항은 일부 PS5™ 게임의 인게임 기어 및 물체와 상호작용하는 장력을 모방합니다.</p>
+                <button class="custom-btn btn-5"><span>더 알아보기</span></button>
+            </div>
+            <div  class="container3flexText2Mobile">
+                <h1>햅틱 피드백</h1><br>
+                <p>반응 속도가 뛰어난 진동이 게임 속 선택에 반응하며 일부 PS5 게임에서 환경 요인을 시뮬레이션합니다.</p>
+                <button class="custom-btn btn-5"><span>더 알아보기</span> </button>
             </div>
         </div>
         <div class="container3flex">
@@ -500,27 +532,10 @@
 
                 </ul>
             </div>
-            <div>
 
-            </div>
         </div>
     </footer>
     
-
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-    
-
 
 
 
@@ -547,17 +562,7 @@
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 5000); // 5초에한번 변경
     }
-    // function change(){
-    //     var menuDisp =  document.querySelector("#menu");
-        
-    //     if(menuDisp.style.display=='none'){
-    //         document.querySelector('.menubarFlex1Flex2 div:nth-child(1)').classList.add("change1")
-    //     }
-    //     else{
-    //         document.querySelector('.menubarFlex1Flex2 div:nth-child(1)').classList.remove("change1")
-    //     }
-        
-    // }
+
 
 
     //스크롤시 화면옆으로 넘김
@@ -571,11 +576,10 @@
             // 3번째 섹션 스크롤탑 0
             if( scrollTop > $("#container13").offset().top ){
                 let offsetTop = (scrollTop - $("#container13").offset().top);
-                // $("#section3 .sec3-wrap > div:nth-child(1)").css("background", "red")
                 $("#container13 .sec3").css("left", -offsetTop);
             }
 
-    });
+        });
 
 
    
@@ -619,13 +623,6 @@
             $('.menuTextFlex:nth-child(4)>div:nth-child(3) a').css('color','white');
         });
 
-        
-        
-
-
-
-
-
 
         $('.menubarFlex:nth-child(1)').click(function(){
             if($('#menu').css('display')=='none' ){
@@ -650,52 +647,91 @@
             
         });
 
-        $('.container2fleximg img').mouseover(function(){
-            $('.container2flexText').stop().fadeIn();
-        }).mouseleave(function(){
-            $('.container2flexText').stop().fadeOut();
+
+
+        var delay = 300;
+        var timer = null;
+        $(window).on('resize', function(){
+	        clearTimeout(timer);
+	        timer = setTimeout(function(){
+		        console.log('resize event!');
+                if (window.innerWidth> 768 ) {
+                    
+                    $('.container2fleximg img').mouseover(function(){
+                    $('.container2flexText').stop().fadeIn();
+                    }).mouseleave(function(){
+                        $('.container2flexText').stop().fadeOut();
+                    });
+
+                    $('.container4fleximg img').mouseover(function(){
+                        $('.container4flexText').stop().fadeIn();
+                    }).mouseleave(function(){
+                        $('.container4flexText').stop().fadeOut();
+                    });
+
+                    $('.container5fleximg img').mouseover(function(){
+                        $('.container5flexText').stop().fadeIn();
+                    }).mouseleave(function(){
+                        $('.container5flexText').stop().fadeOut();
+                    });
+
+                    $('.container6fleximg img').mouseover(function(){
+                        $('.container6flexText').stop().fadeIn();
+                    }).mouseleave(function(){
+                        $('.container6flexText').stop().fadeOut();
+                    });
+
+                    $('.container3fleximg').mouseover(function(){
+                        
+                        $('.container3fleximg').hide();
+                        $('.container3fleximg2').fadeIn();
+                    });
+
+                    $('#container3').hover(function(){
+
+                        $('.container2fleximg').hide();
+                        $('.container3flexText1').stop().fadeIn(200);
+                        $('.container3flexText2').stop().fadeIn(200);
+                        
+                    },function(){
+
+                        $('.container3fleximg').fadeIn();
+                        $('.container3fleximg2').hide();
+                        $('.container2fleximg').fadeIn();
+                        $('.container3flexText1').stop().fadeOut(200);
+                        $('.container3flexText2').stop().fadeOut(200);
+                    });
+                }else if(window.innerWidth< 768 ){
+                    $('.container2fleximg img').mouseover(function(){
+                        $('.container2flexText').stop().css('display','none');
+                    });
+                    $('.container4fleximg img').mouseover(function(){
+                        $('.container4flexText').stop().css('display','none');
+                    });
+                    $('.container5fleximg img').mouseover(function(){
+                        $('.container5flexText').stop().css('display','none');
+                    });
+                    $('.container6fleximg img').mouseover(function(){
+                        $('.container6flexText').stop().css('display','none');
+                    });
+                    
+                }
+	        }, delay);
         });
 
-        $('.container4fleximg img').mouseover(function(){
-            $('.container4flexText').stop().fadeIn();
-        }).mouseleave(function(){
-            $('.container4flexText').stop().fadeOut();
-        });
+        $(window).resize(function(){
+            var width =window.innerWidth;
+            if(width>=768){
+               
 
-        $('.container5fleximg img').mouseover(function(){
-            $('.container5flexText').stop().fadeIn();
-        }).mouseleave(function(){
-            $('.container5flexText').stop().fadeOut();
-        });
+            }else{
 
-        $('.container6fleximg img').mouseover(function(){
-            $('.container6flexText').stop().fadeIn();
-        }).mouseleave(function(){
-            $('.container6flexText').stop().fadeOut();
-        });
-
-        $('.container3fleximg').mouseover(function(){
+            }
             
-            $('.container3fleximg').hide();
-            $('.container3fleximg2').fadeIn();
-        });
-
-
-
-        $('#container3').hover(function(){
-
-            $('.container2fleximg').hide();
-            $('.container3flexText1').stop().fadeIn(200);
-            $('.container3flexText2').stop().fadeIn(200);
             
-        },function(){
-
-            $('.container3fleximg').fadeIn();
-            $('.container3fleximg2').hide();
-            $('.container2fleximg').fadeIn();
-            $('.container3flexText1').stop().fadeOut(200);
-            $('.container3flexText2').stop().fadeOut(200);
-        });
+        }).resize();
+        
+        
 
 
         $('.btn1').click(function(){
@@ -806,8 +842,9 @@
         
         });
         
-
+        
     });
+    
 
     // let mainText = document.getElementById("container1")
     window.addEventListener('scroll',function(){
