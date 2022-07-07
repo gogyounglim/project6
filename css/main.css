@@ -54,6 +54,46 @@ p{font-family: 'YUniverse-B';}
 
 
 @media(min-width:368px) and (max-width:768px){
+
+  .custom-btn2  {
+  width: 100px;
+  height: 30px;
+  padding: 10px 25px;
+  border: 2px solid #000;
+  /* font-family: 'Lato', sans-serif; */
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  font-size: 10px;
+  }
+
+  .custom-btn  {
+    width: 100px;
+    height: 30px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    /* font-family: 'Lato', sans-serif; */
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    font-size: 10px;
+    }
+
+    .btn-5 {
+      background: rgb(1, 77, 163);
+     color: #fff;
+     line-height: 32px;
+     padding: 0;
+     border: none;
+    }
+
+
   body{height:5000px ; }
   #menu{width: 100%; height: 2000px; background-color: black; z-index:1; position: fixed; display:none;}
   .menuText{width: 95%; height: 40%; margin: 0 auto; overflow: hidden; background-color:  black; display: flex; flex-direction: column;}
@@ -525,10 +565,10 @@ p{font-family: 'YUniverse-B';}
   }
   .container8flexText{margin-top: 200px; text-align: center; display: none; padding: 30px;}
   
-  .container8mainText1 h1{font-size: 50px;}
+  .container8mainText1 h1{font-size: 35px;}
   .container8mainText1{margin-top: 300px; position: relative; overflow: hidden; }
   .container8mainText2{margin-top:200px; position: relative; overflow: hidden; }
-  .container8mainText2 h1{font-size: 40px;}
+  .container8mainText2 h1{font-size: 25px;}
   /* .container8mainText h1{font-size: 100px;transition:transform 1s,opacity 1s; transform:translate3d(0px, 120%, 0px) ; transform-style: preserve-3d; } */
   
   .container8mainTextH1{font-size: 100px;transition:transform 1s,opacity 1s; transform:translate3d(0px, 150%, 0px) ; transform-style: preserve-3d;}
@@ -645,7 +685,7 @@ p{font-family: 'YUniverse-B';}
   .container12flexText{margin-top: 50px; text-align: center; display: none; padding: 30px;}
   
   .container12mainText1{ width: 100%; background-color: black; }
-  .container12mainText1 h1{font-size: 50px;}
+  .container12mainText1 h1{font-size: 30px;}
   .container12Slide{width: 100%; height: 400px; background-color: black; overflow: hidden;    position: relative; }
   
   .container12Slide ul{width: 300%; height: 100%; background-color: black; position: absolute;}
@@ -660,14 +700,14 @@ p{font-family: 'YUniverse-B';}
   .container12Slide li:nth-child(2) >div{opacity: 0;}
   .container12Slide li:nth-child(3) >div{opacity: 0;}
   .container12Slide li:nth-child(4) >div{opacity: 0;}
-  .container12Slide li div > h1{margin-top: 30px; font-size: 25px;}
+  .container12Slide li div > h1{margin-top: 30px; font-size: 15px;}
   .container12Slide li div >p{margin-top: 30px;}
   .container12Slide button{margin-left: -10px; margin-top: 15px;}
   .liText p{display: none;}
-  .liText{text-align: center;}
+  .liText{text-align: center; }
 
 
-  .radiobt{width: 100%; height: 50px; text-align: center; margin-top: 50px;}
+  .radiobt{width: 100%; height: 50px; text-align: center; margin-top: 10px;}
   .radiobt button{width: 20px; height: 20px; border-radius: 50%; border: 0px; cursor: pointer; background-color: #999; }
   .radiobt button:hover{opacity: 0.4; transition: 0.3s; }
   .radiobt button:nth-child(1){background-color: rgb(109, 109, 109);}
@@ -699,15 +739,16 @@ p{font-family: 'YUniverse-B';}
   .container13Flex:nth-child(2){width: 45%; height: 100%;  transition: 1s; color: white; display: flex; flex-direction: column; }
   .container13Flex:nth-child(3){width: 27.5%; border-left: 1px solid white; height: 0%; max-height: 1000px;}
   
-  .container13FlexText3 button{margin:10px }
+  .container13FlexText3 button{margin:1px }
   .container13FlexText2 button{margin: 5px; width: 100px;}
   
   .container13FlexText{width: 100%; height: 30%;   opacity: 0; transition: 2.3s;}
-  .container13FlexText2{width: 100%; height: 30%;  margin-top: 60%;opacity: 0; transition: 1s; color: white; margin-left: 5px; padding: 5px; line-height: 30px;}
-  .container13FlexText3{width: 100%; height: 30%;  margin-top: 40%;opacity: 0; transition: 1s; color: white;  padding: 10px; line-height: 30px;}
+  .container13FlexText2{width: 100%; height: 30%;  margin-top: 110%;opacity: 0; transition: 1s; color: white; margin-left: 5px; padding: 5px; line-height: 30px;}
+  .container13FlexText3{width: 100%; height: 30%;  margin-top: 40%;opacity: 0; transition: 1s; color: white;  padding: 10px; line-height: 10px; text-align: center;}
   .container13FlexText2 h1{font-size: 30px; margin-bottom: 30px; margin-left:10px;}
-  .container13FlexText3 h1{font-size: 30px; margin-bottom: 30px; line-height: 40px;}
-  .container13FlexText3 button{width: 100px; margin: 0;}
+  .container13FlexText3 h1{font-size: 20px; margin-bottom: 30px; line-height: 40px;}
+  .container13FlexText3 button{width: 80px; margin: 0;}
+  .container13FlexText2 button{width: 80px; margin: 0;}
   .container13FlexText2 p{font-size: 15px; display: none;}
   .container13FlexText3 p{font-size: 15px; display: none;}
   .container13FlexText h1{padding: 20px; text-align: center; font-size: 30px;}
@@ -725,13 +766,14 @@ p{font-family: 'YUniverse-B';}
   .container13Flex2-1 h1{font-size: 30px; margin-bottom: 30px;}
   .container13Flex2-1 p{font-size: 15px;}
   .container13Flex2-1 > div:nth-child(2){width: 100%;height: 70%; padding-right: 50px; display: none;}
+  .container13Flex2-1 button{width: 120px; line-height: 30px;}
   
   .container13Flex3{opacity: 0; transition: opacity 1s; display: none;}
   
   footer{background-color: rgb(1, 77, 163); width: 100%; height: 700px; display: flex; flex-direction: row; position: relative; margin-top: 910px;}
   .footerFlex1{width: 50%; height: 100%; display: flex; flex-direction: column;}
   .footerFlex1 > div:nth-child(1){width: 110%;height: 20%; }
-  .footerFlex1 > div:nth-child(2){width: 100%;height: 50%; font-size: 12px; padding: 50px; margin-bottom: 30px; color: rgb(226, 224, 224); line-height: 25px;}
+  .footerFlex1 > div:nth-child(2){width: 100%;height: 50%; font-size: 12px; padding: 20px; margin-bottom: 30px; color: rgb(226, 224, 224); line-height: 20px;}
   
   .footerFlex2{width: 30%; height: 100%; display: flex; flex-direction: column;}
   .footerFlex2 > div:nth-child(1){width: 100%;height: 50%;}
@@ -1410,6 +1452,45 @@ p{font-family: 'YUniverse-B';}
   .container4flexTextMobile{display: none; }
   .container5flexTextMobile{display: none; }
   .container6flexTextMobile{display: none; }
+
+  .custom-btn {
+    width: 150px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    /* font-family: 'Lato', sans-serif; */
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    /* margin:30px; */
+  }
+  .custom-btn2 {
+    width: 150px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    /* font-family: 'Lato', sans-serif; */
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+
+    
+    
+  }
+
+  .btn-5 {
+    background: rgb(1, 77, 163);
+   color: #fff;
+   line-height: 42px;
+   padding: 0;
+   border: none;
+  }
 }
 
 
@@ -2073,6 +2154,42 @@ footer{background-color: rgb(1, 77, 163); width: 100%; height: 700px; display: f
   .container4flexTextMobile{display: none; }
   .container5flexTextMobile{display: none; }
   .container6flexTextMobile{display: none; }
+
+  .custom-btn {
+    width: 150px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    /* font-family: 'Lato', sans-serif; */
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    /* margin:30px; */
+  }
+  .custom-btn2 {
+    width: 150px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    /* font-family: 'Lato', sans-serif; */
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    
+  }
+  .btn-5 {
+    background: rgb(1, 77, 163);
+   color: #fff;
+   line-height: 42px;
+   padding: 0;
+   border: none;
+  }
 }
 
 @media(min-width:768px) and (max-width:1400px){
@@ -2093,20 +2210,7 @@ button {
   
   outline: none;
 }
-.custom-btn {
-  width: 150px;
-  height: 40px;
-  padding: 10px 25px;
-  border: 2px solid #000;
-  /* font-family: 'Lato', sans-serif; */
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  /* margin:30px; */
-}
+
 
 .btn-6 {
   background: #000;
@@ -2180,28 +2284,8 @@ button {
 
 
 
-.custom-btn2 {
-  width: 150px;
-  height: 40px;
-  padding: 10px 25px;
-  border: 2px solid #000;
-  /* font-family: 'Lato', sans-serif; */
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  
-}
 
-.btn-5 {
-  background: rgb(1, 77, 163);
- color: #fff;
- line-height: 42px;
- padding: 0;
- border: none;
-}
+
 .btn-5 span {
  position: relative;
  display: block;
