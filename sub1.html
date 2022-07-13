@@ -188,16 +188,24 @@
 
     <div id="container5">
         <div class="container5Slider">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="sliderbox"><img src="img/sub1/5-1.webp" alt=""></div>
+            <div class="sliderbox"><img src="img/sub1/5-2.webp" alt=""></div>
+            <div class="sliderbox"><img src="img/sub1/5-3.webp" alt=""></div>
+            <div class="sliderbox"><img src="img/sub1/5-4.jpg" alt=""></div>
+            <div class="sliderbox"><img src="img/sub1/5-5.jfif" alt=""></div>
+            <div class="sliderbox"><img src="img/sub1/5-6.jpg" alt=""></div>
         </div>
 
-        <div class="prev"></div>
-        <div></div>
+        <div class="prev" onclick="sliderLeftValuePrev()">&lt;</div>
+        <div class="next" onclick="sliderLeftValueNext()">&gt;</div>
     </div>
+
+
+
+
+    </div>
+
+    
 
 
 
@@ -256,6 +264,28 @@
     </footer>
 
     <script>
+
+        function sliderLeftValuePrev(){
+            let sliderWidthValue= document.querySelector('.sliderbox').offsetWidth;
+            let leftValue = document.querySelector('.container5Slider');
+            var targetLeft = leftValue.getBoundingClientRect().left;
+            
+            
+            console.log("width값",sliderWidthValue +20)
+            console.log("left값",targetLeft )
+            leftValue.style.left += sliderWidthValue + "px";
+
+        }
+        function sliderLeftValueNext(){
+            let sliderWidthValue= document.querySelector('.sliderbox').offsetWidth;
+            let leftValue = document.querySelector('.container5Slider')
+            console.log("width값",sliderWidthValue +20)
+            leftValue.style.left = "-" + sliderWidthValue + "px";
+
+        }
+        
+
+
         window.addEventListener('scroll',function(){
             let value = window.scrollY;
             console.log("scrollY",value);
@@ -273,7 +303,12 @@
         });
         $(function(){
 
-
+            // let count1 = 0
+            
+            // $('.next').click(function(){
+            //     let leftValue = 
+            //     $('.container5Slider').css('left','-800px');
+            // });
 
             $('.menubarFlex:nth-child(1)').click(function(){
             if($('#menu').css('display')=='none' ){

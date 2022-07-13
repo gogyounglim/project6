@@ -14,9 +14,6 @@
 
         });
 
-
-
-
    
         $('.menuTextFlex:nth-child(1)').mouseover(function(){
             $('.menuTextFlex:nth-child(1)>div:nth-child(2)').stop().animate({'width':'20%'},500);
@@ -83,6 +80,52 @@
             }   
             
         });
+        if(window.innerWidth >=1920){
+            $('.container2fleximg img').mouseover(function(){
+                $('.container2flexText').stop().fadeIn();
+                }).mouseleave(function(){
+                    $('.container2flexText').stop().fadeOut();
+                });
+
+                $('.container4fleximg img').mouseover(function(){
+                    $('.container4flexText').stop().fadeIn();
+                }).mouseleave(function(){
+                    $('.container4flexText').stop().fadeOut();
+                });
+
+                $('.container5fleximg img').mouseover(function(){
+                    $('.container5flexText').stop().fadeIn();
+                }).mouseleave(function(){
+                    $('.container5flexText').stop().fadeOut();
+                });
+
+                $('.container6fleximg img').mouseover(function(){
+                    $('.container6flexText').stop().fadeIn();
+                }).mouseleave(function(){
+                    $('.container6flexText').stop().fadeOut();
+                });
+
+                $('.container3fleximg').mouseover(function(){
+                    
+                    $('.container3fleximg').hide();
+                    $('.container3fleximg2').fadeIn();
+                });
+
+                $('#container3').hover(function(){
+                    
+                    $('.container3flexText1').stop().fadeIn(200);
+                    $('.container3flexText2').stop().fadeIn(200);
+                    
+                },function(){
+
+                    $('.container3fleximg').fadeIn();
+                    $('.container3fleximg2').hide();
+                    $('.container2fleximg').fadeIn();
+                    $('.container3flexText1').stop().fadeOut(200);
+                    $('.container3flexText2').stop().fadeOut(200);
+                });
+        }
+            
 
 
 
@@ -97,7 +140,7 @@
                 window.onresize = function(){
                     document.location.reload();
                   };
-                if (window.innerWidth> 768 ) {
+                if(window.innerWidth > 768 || window.innerWidth>=1920  ){
                     
                     $('.container2fleximg img').mouseover(function(){
                     $('.container2flexText').stop().fadeIn();
