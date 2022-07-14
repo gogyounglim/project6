@@ -187,17 +187,24 @@
     </div>
 
     <div id="container5">
-        <div class="container5Slider">
-            <div class="sliderbox"><img src="img/sub1/5-1.webp" alt=""></div>
-            <div class="sliderbox"><img src="img/sub1/5-2.webp" alt=""></div>
-            <div class="sliderbox"><img src="img/sub1/5-3.webp" alt=""></div>
-            <div class="sliderbox"><img src="img/sub1/5-4.jpg" alt=""></div>
-            <div class="sliderbox"><img src="img/sub1/5-5.jfif" alt=""></div>
-            <div class="sliderbox"><img src="img/sub1/5-6.jpg" alt=""></div>
+
+        <div class="container5Sliderwrap">
+            <div class="container5Slider">
+                <div class="sliderbox1"><img src="img/sub1/5-1.webp" alt=""></div>
+                <div class="sliderbox2"><img src="img/sub1/5-2.webp" alt=""></div>
+                <div class="sliderbox3"><img src="img/sub1/5-3.webp" alt=""></div>
+                <div class="sliderbox4"><img src="img/sub1/5-4.jpg" alt=""></div>
+                <div class="sliderbox5"><img src="img/sub1/5-5.jfif" alt=""></div>
+                <div class="sliderbox6"><img src="img/sub1/5-6.jpg" alt=""></div>
+    
+            </div>
+                       
+            <div class="prev" onclick="sliderLeftValuePrev()">&lt;</div>
+            <div class="next" onclick="sliderLeftValueNext()">&gt;</div>
         </div>
 
-        <div class="prev" onclick="sliderLeftValuePrev()">&lt;</div>
-        <div class="next" onclick="sliderLeftValueNext()">&gt;</div>
+
+
     </div>
 
 
@@ -266,22 +273,52 @@
     <script>
 
         function sliderLeftValuePrev(){
-            let sliderWidthValue= document.querySelector('.sliderbox').offsetWidth;
+            let sliderWidthValue= document.querySelector('.sliderbox1').offsetWidth;
             let leftValue = document.querySelector('.container5Slider');
             var targetLeft = leftValue.getBoundingClientRect().left;
+            let box = document.querySelector('.sliderbox');
+            let sliderbox = document.querySelector('.container5Slider');
+            
+
             
             
-            console.log("width값",sliderWidthValue +20)
+            console.log("width값",sliderWidthValue )
             console.log("left값",targetLeft )
-            leftValue.style.left += sliderWidthValue + "px";
+            leftValue.style.left = sliderWidthValue +16 + targetLeft+ "px";
 
         }
-        function sliderLeftValueNext(){
-            let sliderWidthValue= document.querySelector('.sliderbox').offsetWidth;
-            let leftValue = document.querySelector('.container5Slider')
-            console.log("width값",sliderWidthValue +20)
-            leftValue.style.left = "-" + sliderWidthValue + "px";
+        let x = 1
+        let y = 1
 
+        function sliderLeftValueNext(){
+            if(x < 7 ){
+                
+            }
+            else if(x=1){
+                
+            }
+            else{
+                x=1
+            };
+            console.log(x);
+            console.log(y);
+
+            let sliderWidthValue= document.querySelector('.sliderbox1').offsetWidth;
+            let leftValue = document.querySelector('.container5Slider');
+            var targetLeft = leftValue.getBoundingClientRect().left;
+            const box = document.querySelector('.sliderbox'+x);
+            const boxlast = document.querySelector('.container5Slider div:last-child')
+            let sliderbox = document.querySelector('.container5Slider');
+            const newBox = box.cloneNode(true);
+
+            newBox.id = 'copyNode';
+            boxlast.after(newBox);
+
+            console.log("width값",sliderWidthValue )
+            leftValue.style.left = (-sliderWidthValue -16+ targetLeft + "px");
+            x=x+1;
+            y=y+1;
+            
         }
         
 
@@ -302,6 +339,23 @@
 
         });
         $(function(){
+            var delay = 300;
+        var timer = null;
+        $(window).on('resize', function(){
+	        clearTimeout(timer);
+	        timer = setTimeout(function(){
+		        console.log('resize event!');
+
+                window.onresize = function(){
+                    document.location.reload();
+                  };
+
+	        }, delay);
+        });
+
+
+
+
 
             // let count1 = 0
             
@@ -403,6 +457,11 @@
                 }); 
             });
         });
+
+
+
+
+
        
     </script>
 </body>
