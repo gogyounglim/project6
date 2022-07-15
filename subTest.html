@@ -8,7 +8,7 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <script src="js/sub1.js"></script>
     <link rel="stylesheet" href="css/public.css">
-    <link rel="stylesheet" href="css/sub1.css">
+    <link rel="stylesheet" href="css/test.css">
 </head>
 <body>
     <div id="menu">
@@ -271,27 +271,48 @@
     </footer>
 
     <script>
-        let x = 1
+        let x = 6
         let y = 1
         function sliderLeftValuePrev(){
             if(x==1){
-
+                x=x+5
             }
-
 
             let sliderWidthValue= document.querySelector('.sliderbox1').offsetWidth;
             let leftValue = document.querySelector('.container5Slider');
             var targetLeft = leftValue.getBoundingClientRect().left;
             const box = document.querySelector('.sliderbox'+x);
-            const boxlast = document.querySelector('.container5Slider div:first-child')
+            let boxfirst = document.querySelector('.container5Slider div:first-child')
             let sliderbox = document.querySelector('.container5Slider');
             const newBox = box.cloneNode(true);
+  
+            if(y<=1){
+                newBox.id = 'copyNode';
+                boxfirst.before(newBox);
 
-            newBox.id = 'copyNode';
-            boxlast.before(newBox);
-
+                boxfirst.animate([
+                    {left:sliderWidthValue + targetLeft + "px"}
+                ],{
+                    duration: 1000,
+                    fill: "forwards"
+                });
+                x=x-1
+            }else{
+                        
+            leftValue.animate([
+                {left:sliderWidthValue +16+ targetLeft + "px"}
+                ],{
+                    duration: 100,
+                    fill: "forwards"
+                });
+                
+                y=y-1
+            }
+            
             console.log("width값",sliderWidthValue )
-            leftValue.style.left = (sliderWidthValue +16+ targetLeft + "px");
+            console.log("y",y)
+            console.log("x",x)
+            
         }
 
 
@@ -305,6 +326,9 @@
             else{
                 x=1
             };
+
+
+            
             console.log(x);
             console.log(y);
 
@@ -315,16 +339,27 @@
             const boxlast = document.querySelector('.container5Slider div:last-child')
             let sliderbox = document.querySelector('.container5Slider');
             const newBox = box.cloneNode(true);
+            if(y>=1){
+                newBox.id = 'copyNode';
+                boxlast.after(newBox);
+            };
 
-            newBox.id = 'copyNode';
-            boxlast.after(newBox);
 
             console.log("width값",sliderWidthValue )
-            leftValue.style.left = (-sliderWidthValue -16+ targetLeft + "px");
+            // leftValue.style.left = (-sliderWidthValue -16+ targetLeft + "px");
+            leftValue.animate([
+                {left:-sliderWidthValue -16+ targetLeft + "px"}
+            ],{
+                duration: 100,
+                fill: "forwards"
+            });
+
             x=x+1;
             y=y+1;
+            
+            
 
-            event.stopPropagation();
+            // event.stopPropagation();
             
         }
         

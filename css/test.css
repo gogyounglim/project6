@@ -114,20 +114,21 @@ body{background-color: black;}
 
 #container5{
   width: 100%;
-   height: 500px;
+   height: 460px;
    
     background-color: black;
-    position: relative;
+    /* position: relative; */
     margin: 0 auto;
     overflow: hidden;
+    margin-bottom: 200px;
   }
-  .container5Sliderwrap{width: 100%; position: relative;}
-.container5Slider{margin-top: 100px; width: 1500%;  background-color: black; margin: 0 auto; position: absolute; left: -37.3%; transition: all 0.5s;}
-.container5Slider > div{ width: 2.8%; float: left;  margin:8px; background-color: white;}
+  .container5Sliderwrap{width: 100%; height: 10%; position: relative;}
+.container5Slider{ margin-top: 100px;  width: 15000%;  background-color: black; margin: 0 auto; position: absolute; left: -89%; transition: all 0.5s;}
+.container5Slider > div{ width: 0.3%;  float: left;  margin:8px; background-color: white;}
 /* .container5Slider div:nth-child(1){margin-left: -7.2%;} */
 .container5Slider div:nth-child(1){left: -800px;}
 
-.prev{position: absolute; width: 40px; height: 70px; text-align: center; background-color:white; margin-top: 10%; left: 6.3%; border-radius: 40px 40px 40px 40px; opacity: 0.8; font-size: 35px; opacity: 0.8; line-height: 59px; cursor: pointer;}
+.prev{position: absolute; width: 40px; height: 70px; text-align: center; background-color:white; margin-top: 10%; left: 6.8%; border-radius: 40px 40px 40px 40px; opacity: 0.8; font-size: 35px; opacity: 0.8; line-height: 59px; cursor: pointer;}
 .next{position: absolute; width: 40px; height: 70px;text-align: center;  background-color: white; border-radius: 40px 40px 40px 40px; margin-top: 10%; left: 88.2%; opacity: 0.8; font-size: 35px; line-height: 60px; cursor: pointer; }
 
 /* footer */
