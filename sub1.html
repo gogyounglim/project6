@@ -129,7 +129,9 @@
             </div>
         </div>
         <div class="container3flex">
+            <h1>역대최강의 스파이더맨을 직접 플레이하세요.</h1><br>
             <div>
+                
                 <img class="con3img" src="img/sub1/3-1.jpg" alt="">
             </div>
         </div>
@@ -184,7 +186,15 @@
                         마일즈의 아버지가 죽은 이후 리오와 마일즈는 리오 본인의 고향인 이스트 할렘으로 이사했습니다.</p>
             </div>
         </div>
+        <div class="container4btWrap">
+            <div class="container4bt bt1"></div>
+            <div class="container4bt bt2"></div>
+            <div class="container4bt bt3" ></div>
+            <div class="container4bt bt4"></div>
+        </div>
+
     </div>
+
 
     <div id="container5">
 
@@ -395,17 +405,16 @@
 
 	        }, delay);
         });
+        $('.bt2').click(function(){
+            $(".container4Flex:nth-child(1)").css("display","none");
+            $(".container4Flex:nth-child(2)").fadeIn();
+            $(".container4Flex:nth-child(3)").css("display","none");
+            $(".container4Flex:nth-child(4)").css("display","none");
+        });
 
 
 
-
-
-            // let count1 = 0
             
-            // $('.next').click(function(){
-            //     let leftValue = 
-            //     $('.container5Slider').css('left','-800px');
-            // });
 
             $('.menubarFlex:nth-child(1)').click(function(){
             if($('#menu').css('display')=='none' ){
