@@ -1,4 +1,6 @@
 
+body{overscroll-behavior: contain;}
+
 /*돌려쓰는 class */
 .transform3dZero{transform:translate3d(0px, 0%, 0px); opacity: 1; font-size: 100px; transition: transform 1s; }
 .transform3dZero2{transform:translate3d(0px, 0%, 0px); opacity: 1; font-size: 70px; transition: transform 1s; padding: 40px;}
