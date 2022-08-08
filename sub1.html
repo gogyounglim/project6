@@ -20,7 +20,7 @@
                 <div>
                     <div class="menuTextFlexLine"></div>
                 </div>
-                <div><a href="#"><p>playstation</p></a>  </div>
+                <div><a href="index.html"><p>playstation</p></a>  </div>
             </div>
             <div class="menuTextFlex">
                 <div>
@@ -29,7 +29,7 @@
                 <div>
                     <div class="menuTextFlexLine"></div>
                 </div>
-                <div><a href="#"><p>독점게임</p></a>  </div>
+                <div><a href="index.html"><p>독점게임</p></a>  </div>
             </div>
             <div class="menuTextFlex">
                 <div>
@@ -38,7 +38,7 @@
                 <div>
                     <div class="menuTextFlexLine"></div>
                 </div>
-                <div><a href="#"><p>플레이방식</p></a>  </div>
+                <div><a href="index.html"><p>플레이방식</p></a>  </div>
             </div>
             <div class="menuTextFlex">
                 <div>
@@ -47,7 +47,7 @@
                 <div>
                     <div class="menuTextFlexLine"></div>
                 </div>
-                <div><a href="#"><p>무선 헤드셋</p></a>  </div>
+                <div><a href="index.html"><p>무선 헤드셋</p></a>  </div>
             </div>
         </div>
     </div>
@@ -71,6 +71,9 @@
         <div class="menubarFlex"><img src="img/main/menu1.svg" alt=""></div>
         <div class="menubarFlex"><img src="img/main/menu2.svg" alt=""></div>
         <div class="menubarFlex"><img src="img/main/menu3.svg" alt=""></div>
+    </div>
+    <div class="logo">
+        <a href="index.html"><img src="img/main/logoimg.png" alt=""></a>
     </div>
     <div id="container1">
         <img src="img/sub1/1-3.jpg" alt="">
@@ -431,6 +434,7 @@
         });
 
 
+        
 
             
 
@@ -444,6 +448,7 @@
                 $('.menubarFlex1Flex2 div:nth-child(2)').css("width","40px");
                 $('.menubarFlex1Flex2 div:nth-child(2)').css("margin-top","0px");
                 $('.menubarFlex1Flex2 div:nth-child(1)').css("width","40px");
+                $('.logo').css("display","none");
                 
             }else{
                 // $('#menu').css('display','none');
@@ -454,6 +459,7 @@
                 $('.menubarFlex1Flex2 div:nth-child(2)').css("width","30px");
                 $('.menubarFlex1Flex2 div:nth-child(1)').css("width","45px");
                 $('.menubarFlex1Flex2 div:nth-child(2)').css("margin-top","17px");
+                $('.logo').fadeIn();
                 
             }   
 
@@ -495,6 +501,10 @@
                 $('.menuTextFlex:nth-child(4)>div:nth-child(2)').stop().animate({'width':'0%'},300);
                 $('.menuTextFlex:nth-child(4)>div:nth-child(1)').css('color','white');
                 $('.menuTextFlex:nth-child(4)>div:nth-child(3) a').css('color','white');
+            });
+
+            $('.btn1').click(function(){
+                $('.btn1').css("background-color","#999");
             });
 
                 
