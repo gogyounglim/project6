@@ -1,5 +1,5 @@
 
-body{overscroll-behavior: contain;}
+body{overscroll-behavior: contain; overscroll-behavior-y: none;}
 
 /*돌려쓰는 class */
 .transform3dZero{transform:translate3d(0px, 0%, 0px); opacity: 1; font-size: 100px; transition: transform 1s; }
@@ -1657,7 +1657,7 @@ button{margin: 20px;}
 .container1flex h1{font-size: 120px; font-family: 'Cinzel', serif; font-weight:bolder ;}
 .container1flexText3{font-size: 250px;}
 .container1flexText1{overflow: hidden; position: relative; width: 80%; margin: 0 auto;}
-.container1flexText2{overflow: hidden;position: relative; width: 80%; margin: 0 auto;}
+.container1flexText2{overflow: hidden;position: relative; width: 100%; margin: 0 auto;}
 .container1flexText3{overflow: hidden;position: relative;font-size: 300px; width: 50%; margin: 0 auto;}
 .container1flexText3 h1{font-size: 170px;}
 
@@ -1701,7 +1701,7 @@ button{margin: 20px;}
 .container2fleximg img{transition: 1s ease;}
 .container2fleximg img:hover{opacity: 0.5; }
 
-.container2flexText{margin-top: 500px; display: none; width: 80%; font-size: 15px;}
+.container2flexText{margin-top: 500px; display: none; width: 80%; font-size: 15px; padding: 30px;}
 
 #container2{
     width: 100%; 
@@ -1738,13 +1738,13 @@ button{margin: 20px;}
 }
 .container3flex:nth-child(2){width: 45%; 
 }
-.container3fleximg{ margin-top: 100px; 
+.container3fleximg{ margin-top: 200px; 
 }
 .container3flex:nth-child(3){width: 27.5%;border-left: 1px solid white;height: 0%;
 }
 .container3fleximg2{display: none; animation: small;}
 
-.container3flexText1{display: none; margin-top: 200px;
+.container3flexText1{display: none; margin-top: 220px;
 }
 .container3flexText2{display: none; padding: 30px; width: 80%;}
 .container3flexText1 h1{color: white; font-size: 50px;
@@ -1755,7 +1755,7 @@ button{margin: 20px;}
 }
 .container3flexText1 p{color: white;
 }
-.container3flexText2:nth-child(1){margin-bottom: 200px; margin-top: 100px;
+.container3flexText2:nth-child(1){margin-bottom: 20px; margin-top: 100px;
 }
 .container3Bt{width: 100px; color: white; margin-top: 10px; height: 30px; 
   background-color: rgb(2, 109, 231); border-radius: 10px; border: 0px;}
@@ -1783,7 +1783,7 @@ button{margin: 20px;}
 }
 .container4flex:nth-child(3){width: 27.5%;border-left: 1px solid white;height: 0%;
 }
-.container4flexText{margin-top: 450px; text-align: center; display: none; padding: 30px; width: 80%;}
+.container4flexText{margin-top: 400px; text-align: center; display: none; padding: 30px; width: 80%;}
 
 /* .container4fleximg img{ height: 650px; 
 }

@@ -3,7 +3,7 @@
 .left0{margin-left: 0px; opacity: 1; transition: 1s; padding-right: 50px;}
 .right0{margin-left: 0px; opacity: 1; transition: 1s; }
 body{background-color: black;}
-body{overscroll-behavior: contain;}
+body{overscroll-behavior: contain; overscroll-behavior-y: none;}
 
 
 
@@ -136,18 +136,19 @@ body{overscroll-behavior: contain;}
 .container4btWrap{
    
   position: absolute;
-  top: 620px;
-  left: 30%;
+  top: 610px;
+  left: 33%;
   
 
 }
 
 .container4bt{
-  width: 20px; height: 20px;
+  width: 13px; height: 13px;
   background-color: white;
   float: left;
   margin-right: 20px;
   border-radius: 20px;
+  cursor: pointer;
 }
 .container4bt:hover{
   opacity: 0.5;
@@ -178,7 +179,7 @@ body{overscroll-behavior: contain;}
 .container5Slider >div img{height: 100%;}
   
 
-.prev{position: absolute; width: 20px; height: 50px; text-align: center; background-color:white; margin-top: 12%; left: 8.3%; border-radius: 40px 40px 40px 40px; opacity: 0.4; font-size:20px; opacity: 0.5; line-height: 47px; cursor: pointer;}
+.prev{ position: absolute; width: 20px; height: 50px; text-align: center; background-color:white; margin-top: 12%; left: 8.3%; border-radius: 40px 40px 40px 40px; opacity: 0.4; font-size:20px; opacity: 0.5; line-height: 47px; cursor: pointer;}
 .next{position: absolute; width: 20px; height: 50px;text-align: center;  background-color: white; border-radius: 40px 40px 40px 40px; margin-top: 12%; left: 90.2%; opacity: 0.5; font-size: 20px; line-height: 47px; cursor: pointer; }
 .prev:hover{
   opacity: 0.4 ;
