@@ -285,12 +285,14 @@
         </div>
     </footer>
 
+    
+
     <script>
         let x = 1
         let y = 1
         let z = 0
         function sliderLeftValuePrev(){
-            
+            document.querySelector('.prev').onclick = null;
 
             if(y==z){
                 z= z-1
@@ -315,27 +317,31 @@
             const newBox = box.cloneNode(true);
 
             sliderbox.style.width = sliderWidthValue*4;
-
+            
+            // document.querySelector('.container5Sliderwrap div:nth-child(2)').classList.remove('prev');
 
             newBox.id = 'copyNode';
             if(y==z){
                 boxlast.before(newBox);
             }
-                
-        
-            
+
 
             console.log("width값",sliderWidthValue )
             if(y!=z){
                 leftValue.style.left = (sliderWidthValue +16+ targetLeft + "px");
             }
             
+            setTimeout(() => {
+                document.querySelector('.prev').onclick = sliderLeftValuePrev
+            }, 500);
+            
+            
             
         }
 
 
         function sliderLeftValueNext(){
-        
+            document.querySelector('.next').onclick = null;
             
             x=x+1;
             y=y+1;
@@ -372,6 +378,10 @@
             console.log(y);
 
             event.stopPropagation();
+
+            setTimeout(() => {
+                document.querySelector('.next').onclick = sliderLeftValueNext
+            }, 500);
             
         }
         
@@ -435,7 +445,9 @@
 
 
         
-
+        $('.prev').on('click',function(){
+            $('.prev').off('click');
+        })
             
 
             $('.menubarFlex:nth-child(1)').click(function(){

@@ -8,7 +8,7 @@ body{overscroll-behavior: contain; overscroll-behavior-y: none;}
 
 
 
-@media(min-width:368px) and (max-width:768px){
+@media(min-width:360px) and (max-width:768px){
   #menu{width: 100%; height: 2000px; background-color: black; z-index:1; position: fixed; display:none;}
   .menuText{width: 95%; height: 40%; margin: 0 auto; overflow: hidden; background-color:  black; display: flex; flex-direction: column;}
   .menuTextFlex{width: 100%; height: 80px; display: flex; flex-direction: row; color: white;}
@@ -69,7 +69,7 @@ body{overscroll-behavior: contain; overscroll-behavior-y: none;}
   .container2flex:nth-child(2){width: 100%; height: 100%; opacity: 0; color: white; background-color: black; display: flex; flex-direction: column;}
   .container2flex:nth-child(2) h2{font-size: 15px;}
   .container2flex:nth-child(2) h1{font-size: 23px;}
-  
+  .container2flex p{font-size: 13px;}
   .container2flexImg{ overflow: hidden; width: 100%; height: 100%;  background-color: black; }
   
   
@@ -106,10 +106,10 @@ body{overscroll-behavior: contain; overscroll-behavior-y: none;}
   .container3flex:nth-child(1) div:nth-child(2){width: 100%; height: 45%;  background-color: black;} 
   /* .container3flex:nth-child(1) div:nth-child(3){width: 100%; height: 40%;  background-color: black;}  */
   
-  .container3flexText{ padding: 30px; margin: 0 auto; position: relative; text-align: center; }
+  .container3flexText{ padding: 30px; margin: 0 auto; position: relative;  }
   .container3flexText h2{ color: rgb(212, 211, 211);}
 
-  .container3flexText p{ line-height: 20px;}
+  .container3flexText p{ line-height: 20px; font-size: 14px;}
   .con3img{margin-left: 300px; opacity: 0;}
 
 #container4Title{width: 100%; height: 80px; text-align: center; color: white;} 
@@ -131,7 +131,7 @@ body{overscroll-behavior: contain; overscroll-behavior-y: none;}
 .container4Flex:nth-child(4){display: none;}
 .container4FlexImg{width: 70%; height: 60%; margin: 0 auto;}
 .container4FlexImg:hover{transform: scale(1.1); transition: transform 0.5s, opacity 1s; opacity: 0.7;}
-.container4FlexText{margin-top: 30px; font-size: 16px; width: 100%; height: 20%; color: white; background-color: black; padding: 10px; line-height: 25px;}
+.container4FlexText{margin-top: 30px; font-size: 14px; width: 100%; height: 20%; color: white; background-color: black; padding: 10px; line-height: 25px;}
 
 .container4btWrap{
    
@@ -179,7 +179,7 @@ body{overscroll-behavior: contain; overscroll-behavior-y: none;}
 .container5Slider >div img{height: 100%;}
   
 
-.prev{ position: absolute; width: 20px; height: 50px; text-align: center; background-color:white; margin-top: 12%; left: 8.3%; border-radius: 40px 40px 40px 40px; opacity: 0.4; font-size:20px; opacity: 0.5; line-height: 47px; cursor: pointer;}
+.prev{ position: absolute; width: 20px; height: 50px; text-align: center; background-color:white; margin-top: 12%; left: 3.3%; border-radius: 40px 40px 40px 40px; opacity: 0.4; font-size:20px; opacity: 0.5; line-height: 47px; cursor: pointer;}
 .next{position: absolute; width: 20px; height: 50px;text-align: center;  background-color: white; border-radius: 40px 40px 40px 40px; margin-top: 12%; left: 90.2%; opacity: 0.5; font-size: 20px; line-height: 47px; cursor: pointer; }
 .prev:hover{
   opacity: 0.4 ;
